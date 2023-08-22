@@ -1,50 +1,44 @@
 
-//Watch
-import 'package:flutter/material.dart';
 
-void main() {
+//  Dark Shadow Butten
+import 'package:flutter/material.dart';
+void main()
+{
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Watch"),
-          backgroundColor: Color(0xff453C67),
-        ),
-        body: Align(
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xff453C67),
-                  Colors.blue,
-                ],
-                stops: [0.2,0.9],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-            ),
-            alignment: Alignment.center,
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.black,
+          appBar: AppBar(
+            backgroundColor: Colors.red,
+            title: const Text('Dark Shadow Butten'),
+            centerTitle: true,
+          ),
+          body: Center(
             child: Container(
               height: 80,
-              width: 200,
-              decoration: BoxDecoration(
-                color: Color(0xff2C74B3),
-                border: Border.all(
-                  color: Color(0xff0081C9),
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(35),
-              ),
+              width: 220,
+
+
               alignment: Alignment.center,
-              child:  Text(
-                "Flutter",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+
+              child: const Text('Tap',style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold)),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                border: Border.all(color: Colors.red,width: 1),
+                shape: BoxShape.rectangle,
+                color: Colors.black,
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.red,
+                      spreadRadius: 5,
+                      blurRadius: 20
+
+                  ),
+                ],
               ),
+
             ),
           ),
         ),

@@ -20,8 +20,7 @@
               child: Container(
                  height: 200,
                  width: 200,
-
-                 alignment: Alignment.center,
+                alignment: Alignment.center,
                  child: const Text('Go',style: TextStyle(color: Colors.white,fontSize: 20)),
                  decoration: BoxDecoration(
                      border: Border.all(color: Colors.white,width: 1),
